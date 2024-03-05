@@ -8,6 +8,7 @@ When('I click on the search box', async function(){
 });
 
 When('I type {string}', async function(input){
+    // REVIEW: The "input" variable is not used
     const textField = await searchPage.searchBox;
     await textField.setValue('Blouse');  
 });
@@ -17,7 +18,11 @@ When('I click on the search button', async function(){
     await searchButton.click();    
 });
 
-Then('I should see product list containing {string}', async function(input){    
+Then('I should see product list containing {string}', async function(input){   
+    // REVIEW: Where is the validation product validation?
+    // To get a list of elements you should have used $$() function.
+    // Also the "input" variable is not used
+
     const productList = await listPage.productList;
     this.listPage = await productList.getText();
     await productList.getAttribute('option-label');

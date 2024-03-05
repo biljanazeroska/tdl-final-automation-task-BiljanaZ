@@ -7,6 +7,7 @@ Feature: Orders
         And I click on a product
         And I select size and color
         And I click the Add to Card button
+        # REVIEW: "When" steps are for actions, not outcomes
         And I see a message "Product successfully added to your shopping cart"
         And I click the Proceed to Checkout button
         # And A "SHOPPING-CART SUMMARY" is displayed

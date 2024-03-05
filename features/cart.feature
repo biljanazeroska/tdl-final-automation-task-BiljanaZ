@@ -9,5 +9,7 @@ Feature: Cart Item Counter
         And I click the Add to Card button
         And I see a message "Product successfully added to your shopping cart"
         And I click the Proceed to Checkout button
+        # REVIEW: "I click" is not a Then step
         Then I click on the cart
+        # REVIEW: Where are steps for validation?
         
